@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOVEY Python Prep - LOVEY’S SUPER PYTHON STUDY GUIDE!</title>
+<title>LOVEY Python Prep - 12 - PANDAS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./index.html" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -106,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">11 - API</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./PANDAS.html" rel="" target="">
+    <a class="nav-link active" href="./PANDAS.html" rel="" target="" aria-current="page">
  <span class="menu-text">12 - PANDAS</span></a>
   </li>  
   <li class="nav-item">
@@ -129,16 +129,20 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#python-programming-study-guide-units-07---12" id="toc-python-programming-study-guide-units-07---12" class="nav-link active" data-scroll-target="#python-programming-study-guide-units-07---12">Python Programming Study Guide: Units 07 - 12</a>
+  <li><a href="#study-guide-for-python-programming-unit-on-data-analysis" id="toc-study-guide-for-python-programming-unit-on-data-analysis" class="nav-link active" data-scroll-target="#study-guide-for-python-programming-unit-on-data-analysis">Study Guide for Python Programming: Unit on Data Analysis</a></li>
+  <li><a href="#study-guide-for-python-programming-unit-on-pandas" id="toc-study-guide-for-python-programming-unit-on-pandas" class="nav-link" data-scroll-target="#study-guide-for-python-programming-unit-on-pandas">Study Guide for Python Programming: Unit on Pandas</a>
   <ul class="collapse">
   <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a>
   <ul class="collapse">
-  <li><a href="#unit-07-file-handling" id="toc-unit-07-file-handling" class="nav-link" data-scroll-target="#unit-07-file-handling">Unit 07: File Handling</a></li>
-  <li><a href="#unit-08-lists" id="toc-unit-08-lists" class="nav-link" data-scroll-target="#unit-08-lists">Unit 08: Lists</a></li>
-  <li><a href="#unit-09-dictionaries" id="toc-unit-09-dictionaries" class="nav-link" data-scroll-target="#unit-09-dictionaries">Unit 09: Dictionaries</a></li>
-  <li><a href="#unit-10-http" id="toc-unit-10-http" class="nav-link" data-scroll-target="#unit-10-http">Unit 10: HTTP</a></li>
-  <li><a href="#unit-11-apis" id="toc-unit-11-apis" class="nav-link" data-scroll-target="#unit-11-apis">Unit 11: APIs</a></li>
-  <li><a href="#unit-12-pandas-library" id="toc-unit-12-pandas-library" class="nav-link" data-scroll-target="#unit-12-pandas-library">Unit 12: Pandas Library</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a></li>
+  <li><a href="#what-is-pandas" id="toc-what-is-pandas" class="nav-link" data-scroll-target="#what-is-pandas">What is Pandas?</a></li>
+  <li><a href="#pandas-essential-concepts" id="toc-pandas-essential-concepts" class="nav-link" data-scroll-target="#pandas-essential-concepts">Pandas: Essential Concepts</a></li>
+  <li><a href="#basic-operations-in-pandas" id="toc-basic-operations-in-pandas" class="nav-link" data-scroll-target="#basic-operations-in-pandas">Basic Operations in Pandas</a></li>
+  <li><a href="#data-loading-capabilities" id="toc-data-loading-capabilities" class="nav-link" data-scroll-target="#data-loading-capabilities">Data Loading Capabilities</a></li>
+  </ul></li>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions">Practice Questions</a>
+  <ul class="collapse">
+  <li><a href="#correct-answers-and-explanations" id="toc-correct-answers-and-explanations" class="nav-link" data-scroll-target="#correct-answers-and-explanations">Correct Answers and Explanations</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -149,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">LOVEY’S SUPER PYTHON STUDY GUIDE!</h1>
+<h1 class="title">12 - PANDAS</h1>
 </div>
 
 
@@ -164,77 +168,175 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="study-guide-for-python-programming-unit-on-data-analysis" class="level1">
+<h1>Study Guide for Python Programming: Unit on Data Analysis</h1>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<p><img src="Lovey1.jpg" class="img-fluid"></p>
-<p>Lovey is intrigued by Python!</p>
+<p><img src="Lovey2.jpg" class="img-fluid"></p>
+<p>Lovey kind of looks like a Panda?</p>
 </div>
 <div id="second-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<section id="general-exam-preparation-advice" class="level3">
-<h3 class="anchored" data-anchor-id="general-exam-preparation-advice">General Exam Preparation Advice</h3>
+<section id="pandas-syntax" class="level3">
+<h3 class="anchored" data-anchor-id="pandas-syntax">Pandas Syntax</h3>
+<p>Here’s a bulleted list summarizing the syntax for the specified Pandas functions:</p>
 <ul>
-<li><strong>Review Readings and Lectures</strong>: Focus on key terms like “def” or “infinite loop”.</li>
-<li><strong>Understand Code Application</strong>: Know how to write and interpret Python code, especially for file handling, lists, dictionaries, requests, and pandas.</li>
-<li><strong>Practice with Examples</strong>: Use the FEQT from large group sessions as a model for exam questions.</li>
-<li><strong>Group Study</strong>: Discuss and quiz each other on key concepts and potential exam questions.</li>
-<li><strong>Note Sheet</strong>: Prepare a comprehensive 8.5x11 sheet with crucial notes and summaries.</li>
+<li><strong>loc</strong>
+<ul>
+<li>Accesses a group of rows and columns by labels or a boolean array.</li>
+<li>Syntax: <code>DataFrame.loc[&lt;row_labels&gt;, &lt;column_labels&gt;]</code></li>
+</ul></li>
+<li><strong>iloc</strong>
+<ul>
+<li>Accesses a group of rows and columns by integer index positions.</li>
+<li>Syntax: <code>DataFrame.iloc[&lt;row_indices&gt;, &lt;column_indices&gt;]</code></li>
+</ul></li>
+<li><strong>series()</strong>
+<ul>
+<li>Creates a Pandas Series from a list, array, or dictionary.</li>
+<li>Syntax: <code>pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)</code></li>
+</ul></li>
+<li><strong>DataFrame()</strong>
+<ul>
+<li>Creates a DataFrame from a variety of input data structures like a 2D array, dictionary of arrays, Series, or another DataFrame.</li>
+<li>Syntax: <code>pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)</code></li>
+</ul></li>
+<li><strong>read_csv()</strong>
+<ul>
+<li>Reads a CSV file into a DataFrame.</li>
+<li>Syntax: <code>pandas.read_csv(filepath_or_buffer, sep=',', delimiter=None, header='infer', names=None, index_col=None, usecols=None, ...)</code></li>
+</ul></li>
+<li><strong>Row / Column Filters</strong>
+<ul>
+<li>Used to filter the rows or columns of a DataFrame based on some condition or criteria.</li>
+<li>Syntax for Row Filter: <code>DataFrame[DataFrame['column_name'] &lt;operator&gt; &lt;condition&gt;]</code></li>
+<li>Syntax for Column Filter: <code>DataFrame[['column_name1', 'column_name2', ...]]</code></li>
+</ul></li>
+<li><strong>to_records()</strong>
+<ul>
+<li>Converts DataFrame to a NumPy record array.</li>
+<li>Syntax: <code>DataFrame.to_records(index=True, column_dtypes=None, index_dtypes=None)</code></li>
+</ul></li>
 </ul>
 </section>
 </div>
 </div>
 </div>
-<section id="python-programming-study-guide-units-07---12" class="level1">
-<h1>Python Programming Study Guide: Units 07 - 12</h1>
+</section>
+<section id="study-guide-for-python-programming-unit-on-pandas" class="level1">
+<h1>Study Guide for Python Programming: Unit on Pandas</h1>
 <section id="key-concepts" class="level2">
 <h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
-<section id="unit-07-file-handling" class="level3">
-<h3 class="anchored" data-anchor-id="unit-07-file-handling"><a href="./Files.html">Unit 07: File Handling</a></h3>
+<section id="data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="data-analysis">Data Analysis</h3>
 <ul>
-<li><strong>Open and Read Files</strong>: Using <code>open()</code>, <code>read()</code>, <code>readlines()</code> for accessing file contents.</li>
-<li><strong>Write to Files</strong>: Using <code>write()</code> to create or modify files.</li>
-<li><strong>Closing Files</strong>: Importance of closing files or using <code>with</code> statement for automatic closure.</li>
+<li><strong>Definition</strong>: The process of applying logical techniques to describe, condense, recap, evaluate data, and illustrate information.</li>
+<li><strong>Goals</strong>: To discover useful information, provide insights, suggest conclusions, and support decision-making.</li>
 </ul>
 </section>
-<section id="unit-08-lists" class="level3">
-<h3 class="anchored" data-anchor-id="unit-08-lists"><a href="./Lists.html">Unit 08: Lists</a></h3>
+<section id="what-is-pandas" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-pandas">What is Pandas?</h3>
 <ul>
-<li><strong>Mutable Sequence Types</strong>: Understanding that lists can be changed after creation.</li>
-<li><strong>List Operations</strong>: <code>append()</code>, <code>index()</code>, <code>insert()</code>, <code>pop()</code>, <code>remove()</code>, <code>reverse()</code>, <code>count()</code>.</li>
-<li><strong>Indexing and Slicing</strong>: Accessing elements using indices and slicing for sublists.</li>
+<li><strong>Pandas Package</strong>: A Python package for data analysis, providing built-in data structures for manipulating and analyzing data sets.</li>
+<li><strong>Functionality</strong>: Allows fetching data from various sources and tabulating it for analysis.</li>
+<li><strong>Data Structures</strong>: Includes Series and DataFrame, which simplify data manipulation.</li>
+<li><strong>Documentation</strong>: Extensive documentation available at <a href="http://pandas.pydata.org/pandas-docs/stable/">Pandas Documentation</a>.</li>
 </ul>
 </section>
-<section id="unit-09-dictionaries" class="level3">
-<h3 class="anchored" data-anchor-id="unit-09-dictionaries"><a href="./Dictionaries.html">Unit 09: Dictionaries</a></h3>
+<section id="pandas-essential-concepts" class="level3">
+<h3 class="anchored" data-anchor-id="pandas-essential-concepts">Pandas: Essential Concepts</h3>
 <ul>
-<li><strong>Key-Value Pairs</strong>: Understanding the structure of dictionaries.</li>
-<li><strong>Dictionary Functions</strong>: <code>keys()</code>, <code>values()</code>, <code>get()</code> for accessing dictionary elements.</li>
+<li><strong>Series</strong>: A named Python list, similar to a dictionary with a list as a value.
+<ul>
+<li>Example: <code>{‘grades’: [50, 90, 100, 45]}</code></li>
+</ul></li>
+<li><strong>DataFrame</strong>: A dictionary of Series, representing a tabular data structure.
+<ul>
+<li>Example: <code>{‘names’: [‘bob’, ‘ken’, ‘art’, ‘joe’], ‘grades’: [50, 90, 100, 45]}</code></li>
+</ul></li>
 </ul>
 </section>
-<section id="unit-10-http" class="level3">
-<h3 class="anchored" data-anchor-id="unit-10-http"><a href="./HTTP.html">Unit 10: HTTP</a></h3>
+<section id="basic-operations-in-pandas" class="level3">
+<h3 class="anchored" data-anchor-id="basic-operations-in-pandas">Basic Operations in Pandas</h3>
 <ul>
-<li><strong>Making HTTP Requests</strong>: Using <code>requests.get()</code> to make GET requests.</li>
-<li><strong>Handling JSON</strong>: Using <code>json()</code> for parsing JSON responses.</li>
-<li><strong>Query Parameters</strong>: Understanding and using query strings/params in requests.</li>
+<li><strong>Creating a DataFrame</strong>: From a dictionary, CSV, JSON, HTML tables, or database queries.</li>
+<li><strong>Column Selection</strong>: Accessing specific columns in a DataFrame.</li>
+<li><strong>Row Selection</strong>: Using Boolean indexing to filter rows based on conditions.</li>
+<li><strong>Data Manipulation</strong>: Basic operations like row/column filters, handling null values, <code>head()</code>, <code>sample()</code>, and <code>value_counts</code>.</li>
 </ul>
 </section>
-<section id="unit-11-apis" class="level3">
-<h3 class="anchored" data-anchor-id="unit-11-apis"><a href="./API.html">Unit 11: APIs</a></h3>
+<section id="data-loading-capabilities" class="level3">
+<h3 class="anchored" data-anchor-id="data-loading-capabilities">Data Loading Capabilities</h3>
 <ul>
-<li><strong>API</strong>: A set of functions and procedures that allow the creation of applications accessing features or data of an operating system, application, or other services.</li>
-<li><strong>HTTP Protocol</strong>: The foundation for data communication on the Web, used by Web APIs.</li>
-<li><strong>JSON Responses</strong>: Most Web APIs return data in JSON (JavaScript Object Notation) format.</li>
+<li><strong>Reading Data</strong>: Pandas can read data from CSV, Excel, delimited files, HTML tables, JSON, and API outputs.</li>
+<li><strong>Data Exploration</strong>: Once data is loaded into a DataFrame, it’s easy to explore and manipulate.</li>
 </ul>
 </section>
-<section id="unit-12-pandas-library" class="level3">
-<h3 class="anchored" data-anchor-id="unit-12-pandas-library"><a href="./PANDAS.html">Unit 12: Pandas Library</a></h3>
+</section>
+<section id="practice-questions" class="level2">
+<h2 class="anchored" data-anchor-id="practice-questions">Practice Questions</h2>
+<ol start="21" type="1">
+<li><strong>What Pandas data structure is similar to a Python dictionary?</strong>
 <ul>
-<li><strong>DataFrames and Series</strong>: Understanding the basic structures in Pandas.</li>
-<li><strong>Reading Data</strong>: Using <code>read_csv()</code> for reading CSV files.</li>
-<li><strong>Data Selection</strong>: Using <code>loc</code>, <code>iloc</code> for row/column selection and filters.</li>
-<li><strong>Data Conversion</strong>: Converting data using <code>to_records()</code>.</li>
-</ul>
+<li>A. DataFrame</li>
+<li>B. Series</li>
+<li>C. List</li>
+<li>D. Tuple</li>
+</ul></li>
+<li><strong>Which method in Pandas is used to read a CSV file into a DataFrame?</strong>
+<ul>
+<li>A. <code>pd.read_csv()</code></li>
+<li>B. <code>pd.read_excel()</code></li>
+<li>C. <code>pd.read_json()</code></li>
+<li>D. <code>pd.read_html()</code></li>
+</ul></li>
+<li><strong>How do you select a column named ‘Age’ from a DataFrame <code>df</code>?</strong>
+<ul>
+<li>A. <code>df['Age']</code></li>
+<li>B. <code>df.Age</code></li>
+<li>C. Both A and B</li>
+<li>D. <code>df(Age)</code></li>
+</ul></li>
+<li><strong>What is the output of <code>df.head(3)</code> where <code>df</code> is a Pandas DataFrame?</strong>
+<ul>
+<li>A. The first 3 columns of <code>df</code></li>
+<li>B. The first 3 rows of <code>df</code></li>
+<li>C. The last 3 rows of <code>df</code></li>
+<li>D. The header row of <code>df</code></li>
+</ul></li>
+<li><strong>In Pandas, how do you filter rows in DataFrame <code>df</code> where the column ‘Sales’ is greater than 100?</strong>
+<ul>
+<li>A. <code>df[df['Sales'] &gt; 100]</code></li>
+<li>B. <code>df('Sales' &gt; 100)</code></li>
+<li>C. <code>df.get('Sales' &gt; 100)</code></li>
+<li>D. <code>df.query('Sales &gt; 100')</code></li>
+</ul></li>
+</ol>
+<hr>
+<section id="correct-answers-and-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="correct-answers-and-explanations">Correct Answers and Explanations</h3>
+<ol start="21" type="1">
+<li><strong>Answer: A. DataFrame</strong>
+<ul>
+<li><strong>Explanation</strong>: A DataFrame is a tabular data structure in Pandas, similar to a dictionary of Series.</li>
+</ul></li>
+<li><strong>Answer: A. <code>pd.read_csv()</code></strong>
+<ul>
+<li><strong>Explanation</strong>: The <code>pd.read_csv()</code> function is used in Pandas to read data from a CSV file into a DataFrame.</li>
+</ul></li>
+<li><strong>Answer: C. Both A and B</strong>
+<ul>
+<li><strong>Explanation</strong>: In Pandas, a column can be selected using either <code>df['Age']</code> or <code>df.Age</code>.</li>
+</ul></li>
+<li><strong>Answer: B. The first 3 rows of <code>df</code></strong>
+<ul>
+<li><strong>Explanation</strong>: The <code>head()</code> method in Pandas returns the first N rows of the DataFrame, with <code>df.head(3)</code> returning the first 3 rows.</li>
+</ul></li>
+<li><strong>Answer: A. <code>df[df['Sales'] &gt; 100]</code></strong>
+<ul>
+<li><strong>Explanation</strong>: This syntax is used for Boolean indexing in Pandas, filtering rows where the ‘Sales’ column values are greater than 100.</li>
+</ul></li>
+</ol>
 
 
 </section>

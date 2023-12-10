@@ -51,9 +51,12 @@ Lovey is intrigued by Python!
 - **Query Parameters**: Understanding and using query strings/params in requests.
 
 ### [Unit 11: APIs](API.qmd)
+- **API**: A set of functions and procedures that allow the creation of applications accessing features or data of an operating system, application, or other services.
+- **HTTP Protocol**: The foundation for data communication on the Web, used by Web APIs.
+- **JSON Responses**: Most Web APIs return data in JSON (JavaScript Object Notation) format.
 
 
-### Unit 12: Pandas Library
+### [Unit 12: Pandas Library](PANDAS.qmd)
 - **DataFrames and Series**: Understanding the basic structures in Pandas.
 - **Reading Data**: Using `read_csv()` for reading CSV files.
 - **Data Selection**: Using `loc`, `iloc` for row/column selection and filters.

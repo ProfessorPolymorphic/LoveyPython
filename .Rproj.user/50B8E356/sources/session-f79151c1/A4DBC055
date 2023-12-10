@@ -1,26 +1,26 @@
 {
-    "id": "091A8152",
-    "path": "~/Documents/GitHub/LearnPython/Lists.qmd",
-    "project_path": "Lists.qmd",
+    "id": "A4DBC055",
+    "path": "~/Documents/GitHub/LearnPython/API.qmd",
+    "project_path": "API.qmd",
     "type": "quarto_markdown",
     "hash": "0",
     "contents": "",
     "dirty": false,
-    "created": 1702233427666.0,
+    "created": 1702243164021.0,
     "source_on_save": false,
-    "relative_order": 3,
+    "relative_order": 4,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "52,4",
-        "scrollLine": "37"
+        "cursorPosition": "68,92",
+        "scrollLine": "63"
     },
     "folds": "",
-    "lastKnownWriteTime": 1702238178,
+    "lastKnownWriteTime": 1702243191,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1702238178717,
+    "last_content_update": 1702243191518,
     "read_only": false,
     "read_only_alternatives": []
 }

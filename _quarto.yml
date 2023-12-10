@@ -12,6 +12,9 @@ website:
       - Lists.qmd
       - Dictionaries.qmd
       - HTTP.qmd
+      - API.qmd
+      - PANDAS.qmd
+      - PracticeExam.qmd
      
 
 format:

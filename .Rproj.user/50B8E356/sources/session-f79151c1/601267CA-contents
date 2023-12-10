@@ -1,0 +1,40 @@
+---
+title: "Practice the things!"
+---
+
+## Questions from all the chapters!
+
+These questions are not sorted by chapter, so it will give you a more realistic experience for the test.
+
+## Practice Questions
+
+1. What does the `readlines()` method in file handling return?
+   - A. The entire file content as a single string.
+   - B. The number of lines in the file.
+   - C. A list of strings, each representing a line in the file.
+   - D. The first line of the file only.
+
+2. How can you reverse the order of elements in a list `myList`?
+   - A. `myList.sort(reverse=True)`
+   - B. `myList.reverse()`
+   - C. `reverse(myList)`
+   - D. `myList.reversed()`
+
+3. What will `dict.get('key')` return if 'key' does not exist in the dictionary `dict`?
+   - A. KeyError
+   - B. None
+   - C. 0
+   - D. An empty string
+
+4. Which Pandas function is used to select data based on row and column labels?
+   - A. `select()`
+   - B. `iloc[]`
+   - C. `loc[]`
+   - D. `filter()`
+
+5. In the context of the Requests library, what does `raise_for_status()` do?
+   - A. Increases the priority of the request.
+   - B. Raises an exception for unsuccessful status codes.
+   - C. Checks if the server status is active.
+   - D. Updates the status of the request.
+

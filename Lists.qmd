@@ -1,0 +1,214 @@
+---
+title: "08 - LISTS"
+---
+
+# Python Programming Study Guide: Lists as Mutable Sequence Types
+
+:::: {layout="[ 40, 60 ]"}
+
+::: {#first-column}
+![](Bert1.jpg)
+
+Bert's contempt for Lists knows no bounds!
+:::
+
+::: {#second-column}
+
+### List Syntax
+
+Bert made a summary of the syntax for each of the Python list functions in the study guide:
+
+- `append()`
+  - Adds an element to the end of the list.
+  - Syntax: `list.append(element)`
+
+- `index()`
+  - Returns the index of the first occurrence of the specified element.
+  - Syntax: `list.index(element, start, end)`
+  - The `start` and `end` parameters are optional and specify the search range.
+
+- `insert()`
+  - Inserts an element at the specified position.
+  - Syntax: `list.insert(index, element)`
+
+- `pop()`
+  - Removes and returns the element at the specified position.
+  - Syntax: `list.pop(index)`
+  - If the index is not specified, `pop()` removes and returns the last element.
+
+- `remove()`
+  - Removes the first occurrence of the specified element.
+  - Syntax: `list.remove(element)`
+
+- `reverse()`
+  - Reverses the elements of the list in place.
+  - Syntax: `list.reverse()`
+
+- `count()`
+  - Returns the number of times the specified element appears in the list.
+  - Syntax: `list.count(element)`
+
+:::
+
+::::
+
+## Key Concepts
+
+### Lists as Mutable Sequence Types
+- **Mutable**: Lists in Python can be changed after they are created. This is in contrast to strings, which are immutable.
+- **Sequence Type**: A list is an ordered collection of items.
+
+### Indexing and Slicing
+- **Indexing**: Access an individual element of a list using its index, e.g., `list[0]` for the first item.
+- **Slice Notation**: Extract a subset of a list, e.g., `list[start:stop]` extracts elements from index `start` to `stop-1`.
+
+### List Functions and Operations
+- **Add**: `append(item)` adds an item to the end, `insert(index, item)` adds an item at a specified index.
+- **Remove**: `remove(item)` removes the first occurrence of an item.
+- **Update**: Directly assign a new value to a list element, e.g., `list[index] = new_value`.
+- **Find**: Use `index(item)` to find the index of the first occurrence of an item.
+
+### Common Patterns for List Management
+- **Enumeration and Aggregates**: Using loops to iterate over lists, and using functions like `len()`, `max()`, `min()` to aggregate data.
+- **List Mutation**: Changing, adding, or removing elements in a list.
+- **Combining Lists**: Use the `+` operator to concatenate two lists.
+
+## Multiple Choice Questions
+
+1. For `x = [0,1,2,3,4,5]`, what is `x[2:4]`?
+   - A. [2,3]
+   - B. [1,2,3]
+   - C. [1,2]
+   - D. [2,3,4,5]
+
+2. How do you add a new element at the end of a list named `myList`?
+   - A. `myList.append(newElement)`
+   - B. `myList.insert(len(myList), newElement)`
+   - C. `myList.add(newElement)`
+   - D. `myList.put(newElement)`
+
+3. Which operation will combine two lists `list1` and `list2` into a new list `list3`?
+   - A. `list3 = list1 + list2`
+   - B. `list3 = list1.append(list2)`
+   - C. `list3 = list1.extend(list2)`
+   - D. `list3 = combine(list1, list2)`
+
+4. What does `grades[:2]` return if `grades = ['A', 'B+','A','C+','B-']`?
+   - A. ['A', 'B+']
+   - B. ['B+', 'A']
+   - C. ['A', 'B+', 'A']
+   - D. The first two characters of the first item in `grades`
+
+5. What is the result of the following operations on the list `items = ['a','b','c','d']`?
+- A. ['a','b','c','d', 'w']
+- B. ['a','b','d', 'w']
+- C. ['x', 'b', 'd', 'w']
+- D. ['i','dont','know']
+
+
+ 
+
+6. **What is the output of the following code?**
+   
+   ```python
+   myList = [4, 2, 8, 6]
+   myList[2] = 5
+   print(myList)
+   ```
+
+   - A. `[4, 2, 5, 6]`
+   - B. `[4, 2, 8, 5]`
+   - C. `[4, 5, 8, 6]`
+   - D. `[5, 2, 8, 6]`
+
+7. **What is the output of the following code?**
+   
+   ```python
+   x = ["apple", "banana", "cherry"]
+   x.remove("banana")
+   print(x)
+   ```
+
+   - A. `["apple", "banana"]`
+   - B. `["apple", "cherry"]`
+   - C. `["banana", "cherry"]`
+   - D. `["apple", "banana", "cherry"]`
+
+8. **What will be the length of the list after executing the following code?**
+   
+   ```python
+   x = [1, 2, 3, 4, 5]
+   x.append(6)
+   x.extend([7, 8])
+   ```
+
+   - A. `5`
+   - B. `6`
+   - C. `8`
+   - D. `10`
+
+9. **What is the result of the following list slicing operation?**
+   
+   ```python
+   myList = [10, 20, 30, 40, 50]
+   print(myList[1:4])
+   ```
+
+   - A. `[10, 20, 30]`
+   - B. `[20, 30, 40]`
+   - C. `[30, 40, 50]`
+   - D. `[20, 30, 40, 50]`
+
+10. **Which method is used to add an element at a specific index in a list?**
+    
+    - A. `append()`
+    - B. `insert()`
+    - C. `extend()`
+    - D. `add()`
+
+
+### Correct Answers and Explanations
+
+1. **Answer: A. [2,3]**
+- **Explanation**: The slice `x[2:4]` extracts elements from index 2 up to but not including index 4, resulting in `[2, 3]`.
+
+2. **Answer: A. `myList.append(newElement)`**
+- **Explanation**: `append()` is the correct method to add an element to the end of a list. The other options are either incorrect methods or overly complicated.
+
+3. **Answer: A. `list3 = list1 + list2`**
+- **Explanation**: The `+` operator concatenates two lists. `append()` and `extend()` methods modify the list in place and do not return a new list.
+
+4. **Answer: A. ['A', 'B+']**
+- **Explanation**: The slice `grades[:2]` returns the first two elements of the list, which are ['A', 'B+'].
+
+5. **Answer: C. ['x', 'b', 'd', 'w']**
+- **Explanation**: After each operation, the list changes as follows:
+  - `items.append('w')` -> ['a','b','c','d', 'w']
+  - `items.remove('c')` -> ['a','b','d', 'w']
+  - `items.insert(0,'x')` -> ['x', 'a', 'b', 'd', 'w']
+  - `items.pop(1)` -> ['x', 'b', 'd', 'w']
+  
+
+
+6. **Answer: A. `[4, 2, 5, 6]`**
+   
+   **Explanation**: The code changes the element at index 2 (third element) from 8 to 5.
+
+7. **Answer: B. `["apple", "cherry"]`**
+   
+   **Explanation**: The `remove()` method removes the first occurrence of the element "banana" from the list.
+
+8. **Answer: C. `8`**
+   
+   **Explanation**: The `append()` method adds one element, and `extend()` adds three more elements, making the total length 8.
+
+9. **Answer: B. `[20, 30, 40]`**
+   
+   **Explanation**: The slice `[1:4]` includes elements from index 1 to 3 (20, 30, 40).
+
+10. **Answer: B. `insert()`**
+    
+    **Explanation**: The `insert()` method is used to add an element at a specified index. `append()` adds to the end, `extend()` adds multiple elements, and `add()` is not a list method.
+```
+
+This format should correctly render in Quarto, displaying both the questions and their answers in a structured and readable format.

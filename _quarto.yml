@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "LOVEY Python Prep"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - Files.qmd
+      - Lists.qmd
+      - Dictionaries.qmd
+     
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    toc: true
+
+
+

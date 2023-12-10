@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>LOVEY Python Prep - 09 - DICTIONARIES</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">LOVEY Python Prep</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Files.html" rel="" target="">
+ <span class="menu-text">07 - FILES</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Lists.html" rel="" target="">
+ <span class="menu-text">08 - LISTS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./Dictionaries.html" rel="" target="" aria-current="page">
+ <span class="menu-text">09 - DICTIONARIES</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#study-guide-for-python-programming-unit-on-dictionaries" id="toc-study-guide-for-python-programming-unit-on-dictionaries" class="nav-link active" data-scroll-target="#study-guide-for-python-programming-unit-on-dictionaries">Study Guide for Python Programming: Unit on Dictionaries</a>
+  <ul class="collapse">
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a>
+  <ul class="collapse">
+  <li><a href="#basic-concepts-of-dictionaries" id="toc-basic-concepts-of-dictionaries" class="nav-link" data-scroll-target="#basic-concepts-of-dictionaries">Basic Concepts of Dictionaries</a></li>
+  <li><a href="#basic-dictionary-operations" id="toc-basic-dictionary-operations" class="nav-link" data-scroll-target="#basic-dictionary-operations">Basic Dictionary Operations</a></li>
+  <li><a href="#dictionary-methods" id="toc-dictionary-methods" class="nav-link" data-scroll-target="#dictionary-methods">Dictionary Methods</a></li>
+  <li><a href="#lists-vs.-dictionaries" id="toc-lists-vs.-dictionaries" class="nav-link" data-scroll-target="#lists-vs.-dictionaries">Lists vs.&nbsp;Dictionaries</a></li>
+  <li><a href="#lists-of-dictionaries" id="toc-lists-of-dictionaries" class="nav-link" data-scroll-target="#lists-of-dictionaries">Lists of Dictionaries</a></li>
+  <li><a href="#json-and-dictionaries" id="toc-json-and-dictionaries" class="nav-link" data-scroll-target="#json-and-dictionaries">JSON and Dictionaries</a></li>
+  </ul></li>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions">Practice Questions</a>
+  <ul class="collapse">
+  <li><a href="#correct-answers-and-explanations" id="toc-correct-answers-and-explanations" class="nav-link" data-scroll-target="#correct-answers-and-explanations">Correct Answers and Explanations</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">09 - DICTIONARIES</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="study-guide-for-python-programming-unit-on-dictionaries" class="level1">
+<h1>Study Guide for Python Programming: Unit on Dictionaries</h1>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="first-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
+<p><img src="BertBoris.jpg" class="img-fluid"></p>
+<p>Here is a Dictionary of dog emotions:</p>
+<p>{“Boris”: “mild confusion”, “Bert”: “cape fueled rage”}</p>
+</div>
+<div id="second-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
+<section id="list-syntax" class="level3">
+<h3 class="anchored" data-anchor-id="list-syntax">List Syntax</h3>
+<p>Boris made a summary of the syntax for each of the Python dictionary functions in the study guide:</p>
+<ul>
+<li><code>keys()</code>
+<ul>
+<li>Returns a view object displaying a list of all the keys in the dictionary.</li>
+<li>Syntax: <code>dictionary.keys()</code></li>
+</ul></li>
+<li><code>values()</code>
+<ul>
+<li>Returns a view object containing a list of all the values in the dictionary.</li>
+<li>Syntax: <code>dictionary.values()</code></li>
+</ul></li>
+<li><code>get()</code>
+<ul>
+<li>Returns the value for the specified key if the key is in the dictionary.</li>
+<li>Syntax: <code>dictionary.get(key, default)</code></li>
+<li>The <code>default</code> parameter is optional and provides a value to return if the key is not found. If not provided, it defaults to <code>None</code>.</li>
+</ul></li>
+</ul>
+</section>
+</div>
+</div>
+</div>
+<section id="key-concepts" class="level2">
+<h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
+<section id="basic-concepts-of-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="basic-concepts-of-dictionaries">Basic Concepts of Dictionaries</h3>
+<ul>
+<li><strong>Key-Value Pairs</strong>: Dictionaries store data as key-value pairs.</li>
+<li><strong>Mutability</strong>: Python dictionaries are mutable, meaning their values can be changed after creation.</li>
+<li><strong>Accessing Values</strong>: Values in a dictionary are accessed via keys, not indices (e.g., <code>dict[key]</code>).</li>
+</ul>
+</section>
+<section id="basic-dictionary-operations" class="level3">
+<h3 class="anchored" data-anchor-id="basic-dictionary-operations">Basic Dictionary Operations</h3>
+<ul>
+<li><strong>Creating a Dictionary</strong>: Dictionaries are created with curly braces <code>{}</code> or the <code>dict()</code> constructor.</li>
+<li><strong>Updating Values</strong>: Change the value of an item by referencing its key (e.g., <code>dict[key] = new_value</code>).</li>
+<li><strong>Handling <code>KeyError</code></strong>: Occurs when a key is not found in the dictionary.</li>
+</ul>
+</section>
+<section id="dictionary-methods" class="level3">
+<h3 class="anchored" data-anchor-id="dictionary-methods">Dictionary Methods</h3>
+<ul>
+<li><strong>Useful Methods</strong>: <code>get()</code>, <code>keys()</code>, <code>values()</code>, <code>del</code> for deleting a key.</li>
+<li><strong>Handling <code>KeyError</code> with <code>get()</code></strong>: Avoids an error by returning <code>None</code> if the key is not found.</li>
+</ul>
+</section>
+<section id="lists-vs.-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="lists-vs.-dictionaries">Lists vs.&nbsp;Dictionaries</h3>
+<ul>
+<li><strong>When to Use</strong>: Lists are for collections of similar items; dictionaries are for storing records with different types of information.</li>
+</ul>
+</section>
+<section id="lists-of-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="lists-of-dictionaries">Lists of Dictionaries</h3>
+<ul>
+<li><strong>Representing Complex Data Structures</strong>: Useful for storing multiple records (e.g., a list of student records).</li>
+<li><strong>Accessing Data</strong>: Chaining indices and keys (e.g., <code>students[0]['Name']</code>).</li>
+</ul>
+</section>
+<section id="json-and-dictionaries" class="level3">
+<h3 class="anchored" data-anchor-id="json-and-dictionaries">JSON and Dictionaries</h3>
+<ul>
+<li><strong>JSON</strong>: A standard format for data interchange, closely resembling Python dictionaries.</li>
+<li><strong>Serializing and Deserializing</strong>: Converting between JSON strings and Python dictionaries.</li>
+<li><strong>Python’s <code>json</code> Module</strong>: Used for loading and saving dictionaries to and from JSON.</li>
+</ul>
+</section>
+</section>
+<section id="practice-questions" class="level2">
+<h2 class="anchored" data-anchor-id="practice-questions">Practice Questions</h2>
+<ol start="6" type="1">
+<li><strong>What is the value returned by <code>font.get('Size')</code> if <code>font</code> is a dictionary defined as <code>font = {'Name': 'Arial'}</code>?</strong>
+<ul>
+<li>A. <code>None</code></li>
+<li>B. <code>KeyError</code></li>
+<li>C. <code>0</code></li>
+<li>D. <code>'Arial'</code></li>
+</ul></li>
+<li><strong>What does the following code do? <code>x['new_key'] = 'new_value'</code> assuming <code>x</code> is a dictionary?</strong>
+<ul>
+<li>A. Throws an error because ‘new_key’ does not exist.</li>
+<li>B. Adds a new key-value pair to the dictionary.</li>
+<li>C. Changes the value of an existing key.</li>
+<li>D. Does nothing to the dictionary.</li>
+</ul></li>
+<li><strong>If <code>student = {'Name': 'John', 'Age': 21}</code>, what will <code>student['Age'] = 22</code> do?</strong>
+<ul>
+<li>A. Adds a new key ‘Age’ with the value 22.</li>
+<li>B. Changes the value of the ‘Age’ key to 22.</li>
+<li>C. Throws a KeyError.</li>
+<li>D. Creates a new dictionary with ‘Age’ set to 22.</li>
+</ul></li>
+<li><strong>In the context of dictionaries, what does the <code>del</code> keyword do?</strong>
+<ul>
+<li>A. Deletes the entire dictionary.</li>
+<li>B. Deletes a specified key-value pair.</li>
+<li>C. Deletes the value of a specified key.</li>
+<li>D. Clears all values leaving an empty dictionary.</li>
+</ul></li>
+<li><strong>What is the result of <code>len(s)</code> where <code>s = [{'a': 1}, {'b': 2}, {'c': 3}]</code>?</strong>
+<ul>
+<li>A. <code>3</code></li>
+<li>B. <code>6</code></li>
+<li>C. <code>2</code></li>
+<li>D. <code>9</code></li>
+</ul></li>
+</ol>
+<hr>
+<section id="correct-answers-and-explanations" class="level3">
+<h3 class="anchored" data-anchor-id="correct-answers-and-explanations">Correct Answers and Explanations</h3>
+<ol start="6" type="1">
+<li><strong>Answer: A. <code>None</code></strong>
+<ul>
+<li><strong>Explanation</strong>: The <code>get()</code> method returns <code>None</code> if the key is not found in the dictionary.</li>
+</ul></li>
+<li><strong>Answer: B. Adds a new key-value pair to the dictionary.</strong>
+<ul>
+<li><strong>Explanation</strong>: If the key does not exist, it adds the key-value pair to the dictionary.</li>
+</ul></li>
+<li><strong>Answer: B. Changes the value of the ‘Age’ key to 22.</strong>
+<ul>
+<li><strong>Explanation</strong>: Since the ‘Age’ key exists, it updates its value to 22.</li>
+</ul></li>
+<li><strong>Answer: B. Deletes a specified key-value pair.</strong>
+<ul>
+<li><strong>Explanation</strong>: The <code>del</code> keyword removes a specific key-value pair from a dictionary.</li>
+</ul></li>
+<li><strong>Answer: A. <code>3</code></strong>
+<ul>
+<li><strong>Explanation</strong>: The <code>len()</code> function returns the number of items (dictionaries in this case) in the list <code>s</code>, which is 3.</li>
+</ul></li>
+</ol>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

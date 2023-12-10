@@ -6,35 +6,409 @@ title: "EXAM"
 
 These questions are not sorted by chapter, so it will give you a more realistic experience for the test.
 
-## Practice Questions
 
-1. What does the `readlines()` method in file handling return?
+
+1. **What does the `readlines()` method in file handling return?**
    - A. The entire file content as a single string.
    - B. The number of lines in the file.
    - C. A list of strings, each representing a line in the file.
    - D. The first line of the file only.
 
-2. How can you reverse the order of elements in a list `myList`?
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. A list of strings, each representing a line in the file.
+
+**Explanation:** The `readlines()` method reads all the lines in a file and returns them as a list of strings.
+</details>
+
+2. **How can you reverse the order of elements in a list `myList`?**
    - A. `myList.sort(reverse=True)`
    - B. `myList.reverse()`
    - C. `reverse(myList)`
    - D. `myList.reversed()`
 
-3. What will `dict.get('key')` return if 'key' does not exist in the dictionary `dict`?
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. `myList.reverse()`
+
+**Explanation:** The `reverse()` method reverses the elements of the list `myList` in place.
+</details>
+
+3. **What will `dict.get('key')` return if 'key' does not exist in the dictionary `dict`?**
    - A. KeyError
    - B. None
    - C. 0
    - D. An empty string
 
-4. Which Pandas function is used to select data based on row and column labels?
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. None
+
+**Explanation:** The `get()` method returns `None` if the specified key is not found in the dictionary.
+</details>
+
+4. **Which Pandas function is used to select data based on row and column labels?**
    - A. `select()`
    - B. `iloc[]`
    - C. `loc[]`
    - D. `filter()`
 
-5. In the context of the Requests library, what does `raise_for_status()` do?
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. `loc[]`
+
+**Explanation:** The `loc[]` function in Pandas is used to select data based on row and column labels.
+</details>
+
+5. **In the context of the Requests library, what does `raise_for_status()` do?**
    - A. Increases the priority of the request.
    - B. Raises an exception for unsuccessful status codes.
    - C. Checks if the server status is active.
    - D. Updates the status of the request.
 
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. Raises an exception for unsuccessful status codes.
+
+**Explanation:** The `raise_for_status()` method in the Requests library raises an HTTPError exception for responses with HTTP error status codes (like 4xx or 5xx).
+</details>
+
+
+
+6. **What type of request does `requests.post(url)` send?**
+   - A. GET request
+   - B. POST request
+   - C. PUT request
+   - D. DELETE request
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. POST request
+
+**Explanation:** The `requests.post(url)` function sends an HTTP POST request to the specified URL.
+</details>
+
+7. **What does `response.status_code` return in the `requests` library?**
+   - A. The response headers
+   - B. The URL of the request
+   - C. The status code of the HTTP response
+   - D. The body of the response
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. The status code of the HTTP response
+
+**Explanation:** `response.status_code` returns the integer status code of the HTTP response (e.g., 200 for success, 404 for not found).
+</details>
+
+8. **What is the purpose of the `params` parameter in `requests.get(url, params=parameters)`?**
+   - A. To set the request headers
+   - B. To pass data in the request body
+   - C. To add query parameters to the URL
+   - D. To specify the HTTP method
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. To add query parameters to the URL
+
+**Explanation:** The `params` parameter in `requests.get()` is used to append query parameters to the URL.
+</details>
+
+9. **How do you send a JSON payload with a POST request using the `requests` library?**
+   - A. `requests.post(url, data=json_data)`
+   - B. `requests.post(url, json=json_data)`
+   - C. `requests.post(url, params=json_data)`
+   - D. `requests.post(url, headers=json_data)`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. `requests.post(url, json=json_data)`
+
+**Explanation:** To send a JSON payload with a POST request, use the `json` parameter in the `requests.post()` function.
+</details>
+
+10. **How do you include custom headers in a request using the `requests` library?**
+   - A. `requests.get(url, data=headers)`
+   - B. `requests.get(url, json=headers)`
+   - C. `requests.get(url, headers=headers)`
+   - D. `requests.get(url, params=headers)`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. `requests.get(url, headers=headers)`
+
+**Explanation:** Custom headers are included in a request by using the `headers` parameter in the `requests.get()` or other request methods.
+</details>
+
+
+Sure, here are five additional practice questions about API usage, formatted with interactive answers and explanations. The questions start at number 11 and end at 15.
+
+11. **How do you send a JSON payload with a POST request using the `requests` library?**
+   - A. `requests.post(url, data=json_data)`
+   - B. `requests.post(url, json=json_data)`
+   - C. `requests.post(url, params=json_data)`
+   - D. `requests.post(url, headers=json_data)`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. `requests.post(url, json=json_data)`
+
+**Explanation:** To send a JSON payload with a POST request, use the `json` parameter in the `requests.post()` function.
+</details>
+
+12. **Which HTTP method is typically used to delete a resource on the server?**
+   - A. GET
+   - B. POST
+   - C. PUT
+   - D. DELETE
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** D. DELETE
+
+**Explanation:** The HTTP DELETE method is used to request the deletion of a resource identified by a URI.
+</details>
+
+13. **What is the typical use of the `params` argument in `requests.get()`?**
+   - A. To send data in the body of the request
+   - B. To set custom headers for the request
+   - C. To include query string parameters in the URL
+   - D. To specify the HTTP response format
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. To include query string parameters in the URL
+
+**Explanation:** The `params` argument in `requests.get()` is used to append query parameters to the URL of the HTTP GET request.
+</details>
+
+14. **What will `response.raise_for_status()` do if the HTTP response status code is 404?**
+   - A. Return `None`
+   - B. Raise a `HTTPError` exception
+   - C. Print an error message
+   - D. Automatically retry the request
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. Raise a `HTTPError` exception
+
+**Explanation:** `response.raise_for_status()` will raise an `HTTPError` exception for HTTP responses with error status codes like 404.
+</details>
+
+15. **Which function in the `requests` module is used to send an HTTP PUT request?**
+   - A. `requests.put()`
+   - B. `requests.get()`
+   - C. `requests.post()`
+   - D. `requests.delete()`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** A. `requests.put()`
+
+**Explanation:** The `requests.put()` function is used to send an HTTP PUT request to the specified URL.
+</details>
+
+Certainly! Here are practice questions for the specified functions, each followed by an interactive answer section:
+
+16. **What is the result of the following code using `open()` and `read()`?**
+   ```python
+   with open('example.txt', 'r') as file:
+       content = file.read()
+   ```
+   - A. Reads the entire content of 'example.txt'.
+   - B. Reads the first line of 'example.txt'.
+   - C. Opens 'example.txt' in write mode.
+   - D. Returns an error because the mode is not specified.
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** A. Reads the entire content of 'example.txt'.
+
+**Explanation:** The `read()` method reads the entire content of the file when used with `open()` in 'r' (read) mode.
+</details>
+
+17. **What will the following code using `list.append()` output?**
+   ```python
+   myList = [1, 2, 3]
+   myList.append(4)
+   print(myList)
+   ```
+   - A. `[1, 2, 3, 4]`
+   - B. `[4, 1, 2, 3]`
+   - C. `[1, 2, 3]`
+   - D. An error message
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** A. `[1, 2, 3, 4]`
+
+**Explanation:** The `append()` method adds an element to the end of the list.
+</details>
+
+18. **What does the following code using `dict.get()` return?**
+   ```python
+   myDict = {'a': 1, 'b': 2}
+   print(myDict.get('c', 'Not Found'))
+   ```
+   - A. `1`
+   - B. `2`
+   - C. `None`
+   - D. `'Not Found'`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** D. `'Not Found'`
+
+**Explanation:** The `get()` method returns the value for the key if it exists, otherwise it returns the default value provided, in this case, `'Not Found'`.
+</details>
+
+19. **What is the result of the following code using `requests.json()`?**
+   ```python
+   import requests
+   response = requests.get('https://httpbin.org/json')
+   data = response.json()
+   ```
+   - A. The entire HTTP response as a string.
+   - B. The status code of the response.
+   - C. A Python dictionary from the JSON response.
+   - D. The headers of the response.
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. A Python dictionary from the JSON response.
+
+**Explanation:** The `json()` method of the `response` object parses the JSON response content and returns it as a Python dictionary.
+</details>
+
+20. **What will the following Pandas `DataFrame()` code create?**
+   ```python
+   import pandas as pd
+   data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+   df = pd.DataFrame(data)
+   ```
+   - A. A DataFrame with two rows and two columns.
+   - B. A DataFrame with one row and two columns.
+   - C. A Series object.
+   - D. An empty DataFrame.
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** A. A DataFrame with two rows and two columns.
+
+**Explanation:** The `DataFrame()` function creates a DataFrame object from the dictionary, with each key-value pair becoming a column in the DataFrame, resulting in two rows and two columns.
+</details>
+
+Certainly! Here are additional practice questions for the specified functions, starting from number 20, along with interactive answers:
+
+20. **What does the following code using `readlines()` output?**
+   ```python
+   with open('example.txt', 'r') as file:
+       lines = file.readlines()
+   print(len(lines))
+   ```
+Assuming 'example.txt' has 3 lines of text.
+
+   - A. The entire content of 'example.txt' as a single string.
+   - B. `3`
+   - C. A list containing the lines in 'example.txt'.
+   - D. The first line of 'example.txt' only.
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. `3`
+
+**Explanation:** The `readlines()` method returns a list where each element is a line in the file, so `len(lines)` will be the number of lines in the file, which is 3 in this case.
+</details>
+
+21. **What will the following code using `list.count()` output?**
+   ```python
+   myList = [1, 2, 2, 3, 3, 3]
+   print(myList.count(3))
+   ```
+   - A. `1`
+   - B. `2`
+   - C. `3`
+   - D. `6`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. `3`
+
+**Explanation:** The `count()` method returns the number of occurrences of the specified element in the list. There are 3 occurrences of `3` in `myList`.
+</details>
+
+22. **What does the following code using `dict.values()` return?**
+   ```python
+   myDict = {'a': 1, 'b': 2, 'c': 3}
+   values = myDict.values()
+   print(values)
+   ```
+   - A. `['a', 'b', 'c']`
+   - B. `[1, 2, 3]`
+   - C. `{'a': 1, 'b': 2, 'c': 3}`
+   - D. `None`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. `[1, 2, 3]`
+
+**Explanation:** The `values()` method returns a view object that displays a list of all the values in the dictionary.
+</details>
+
+23. **What happens when `response.raise_for_status()` is executed if the HTTP response status code is 500?**
+   - A. Returns `None`
+   - B. Raises a `HTTPError` exception
+   - C. Prints the status code
+   - D. Nothing happens
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. Raises a `HTTPError` exception
+
+**Explanation:** `response.raise_for_status()` will raise an `HTTPError` exception for HTTP responses with error status codes like 500.
+</details>
+
+24. **What will the following Pandas `to_records()` code produce?**
+   ```python
+   import pandas as pd
+   data = {'Name': ['Alice', 'Bob'], 'Age': [25, 30]}
+   df = pd.DataFrame(data)
+   records = df.to_records(index=False)
+   print(records)
+   ```
+   - A. A DataFrame with two rows and two columns.
+   - B. A list of tuples, each representing a row in the DataFrame.
+   - C. A NumPy record array representing the DataFrame.
+   - D. An error, as `to_records` is not a valid method.
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. A NumPy record array representing the DataFrame.
+
+**Explanation:** The `to_records()` method converts the DataFrame into a NumPy record array. The `index=False` parameter excludes the index from the record array.
+</details>

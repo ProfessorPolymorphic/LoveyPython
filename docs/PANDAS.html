@@ -140,10 +140,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#basic-operations-in-pandas" id="toc-basic-operations-in-pandas" class="nav-link" data-scroll-target="#basic-operations-in-pandas">Basic Operations in Pandas</a></li>
   <li><a href="#data-loading-capabilities" id="toc-data-loading-capabilities" class="nav-link" data-scroll-target="#data-loading-capabilities">Data Loading Capabilities</a></li>
   </ul></li>
-  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions">Practice Questions</a>
-  <ul class="collapse">
-  <li><a href="#correct-answers-and-explanations" id="toc-correct-answers-and-explanations" class="nav-link" data-scroll-target="#correct-answers-and-explanations">Correct Answers and Explanations</a></li>
-  </ul></li>
+  <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions">Practice Questions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -283,6 +280,15 @@ ul.task-list li input[type="checkbox"] {
 <li>C. List</li>
 <li>D. Tuple</li>
 </ul></li>
+</ol>
+<details>
+<summary>
+Click to see the answer
+</summary>
+<p><strong>Answer:</strong> A. DataFrame</p>
+<strong>Explanation:</strong> A DataFrame is a tabular data structure in Pandas, similar to a dictionary of Series.
+</details>
+<ol start="22" type="1">
 <li><strong>Which method in Pandas is used to read a CSV file into a DataFrame?</strong>
 <ul>
 <li>A. <code>pd.read_csv()</code></li>
@@ -290,6 +296,15 @@ ul.task-list li input[type="checkbox"] {
 <li>C. <code>pd.read_json()</code></li>
 <li>D. <code>pd.read_html()</code></li>
 </ul></li>
+</ol>
+<details>
+<summary>
+Click to see the answer
+</summary>
+<p><strong>Answer:</strong> A. pd.read_csv()</p>
+<strong>Explanation:</strong> The pd.read_csv() function is used in Pandas to read data from a CSV file into a DataFrame.
+</details>
+<ol start="23" type="1">
 <li><strong>How do you select a column named ‘Age’ from a DataFrame <code>df</code>?</strong>
 <ul>
 <li>A. <code>df['Age']</code></li>
@@ -297,6 +312,15 @@ ul.task-list li input[type="checkbox"] {
 <li>C. Both A and B</li>
 <li>D. <code>df(Age)</code></li>
 </ul></li>
+</ol>
+<details>
+<summary>
+Click to see the answer
+</summary>
+<p><strong>Answer:</strong> C. Both A and B</p>
+<strong>Explanation:</strong> In Pandas, a column can be selected using either df[‘Age’] or df.Age.
+</details>
+<ol start="24" type="1">
 <li><strong>What is the output of <code>df.head(3)</code> where <code>df</code> is a Pandas DataFrame?</strong>
 <ul>
 <li>A. The first 3 columns of <code>df</code></li>
@@ -304,6 +328,15 @@ ul.task-list li input[type="checkbox"] {
 <li>C. The last 3 rows of <code>df</code></li>
 <li>D. The header row of <code>df</code></li>
 </ul></li>
+</ol>
+<details>
+<summary>
+Click to see the answer
+</summary>
+<p><strong>Answer:</strong> B. The first 3 rows of df</p>
+<strong>Explanation:</strong> The head() method in Pandas returns the first N rows of the DataFrame, with df.head(3) returning the first 3 rows.
+</details>
+<ol start="25" type="1">
 <li><strong>In Pandas, how do you filter rows in DataFrame <code>df</code> where the column ‘Sales’ is greater than 100?</strong>
 <ul>
 <li>A. <code>df[df['Sales'] &gt; 100]</code></li>
@@ -312,34 +345,15 @@ ul.task-list li input[type="checkbox"] {
 <li>D. <code>df.query('Sales &gt; 100')</code></li>
 </ul></li>
 </ol>
-<hr>
-<section id="correct-answers-and-explanations" class="level3">
-<h3 class="anchored" data-anchor-id="correct-answers-and-explanations">Correct Answers and Explanations</h3>
-<ol start="21" type="1">
-<li><strong>Answer: A. DataFrame</strong>
-<ul>
-<li><strong>Explanation</strong>: A DataFrame is a tabular data structure in Pandas, similar to a dictionary of Series.</li>
-</ul></li>
-<li><strong>Answer: A. <code>pd.read_csv()</code></strong>
-<ul>
-<li><strong>Explanation</strong>: The <code>pd.read_csv()</code> function is used in Pandas to read data from a CSV file into a DataFrame.</li>
-</ul></li>
-<li><strong>Answer: C. Both A and B</strong>
-<ul>
-<li><strong>Explanation</strong>: In Pandas, a column can be selected using either <code>df['Age']</code> or <code>df.Age</code>.</li>
-</ul></li>
-<li><strong>Answer: B. The first 3 rows of <code>df</code></strong>
-<ul>
-<li><strong>Explanation</strong>: The <code>head()</code> method in Pandas returns the first N rows of the DataFrame, with <code>df.head(3)</code> returning the first 3 rows.</li>
-</ul></li>
-<li><strong>Answer: A. <code>df[df['Sales'] &gt; 100]</code></strong>
-<ul>
-<li><strong>Explanation</strong>: This syntax is used for Boolean indexing in Pandas, filtering rows where the ‘Sales’ column values are greater than 100.</li>
-</ul></li>
-</ol>
+<details>
+<summary>
+Click to see the answer
+</summary>
+<p><strong>Answer:</strong> A. df[df[‘Sales’] &gt; 100]</p>
+<strong>Explanation:</strong> This syntax is used for Boolean indexing in Pandas, filtering rows where the ‘Sales’ column values are greater than 100.
+</details>
 
 
-</section>
 </section>
 </section>
 

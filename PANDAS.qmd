@@ -92,11 +92,28 @@ Here's a bulleted list summarizing the syntax for the specified Pandas functions
     - C. List
     - D. Tuple
 
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** A. DataFrame
+
+**Explanation:** A DataFrame is a tabular data structure in Pandas, similar to a dictionary of Series.
+</details>
+
+
 22. **Which method in Pandas is used to read a CSV file into a DataFrame?**
     - A. `pd.read_csv()`
     - B. `pd.read_excel()`
     - C. `pd.read_json()`
     - D. `pd.read_html()`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** A. pd.read_csv()
+
+**Explanation:** The pd.read_csv() function is used in Pandas to read data from a CSV file into a DataFrame.
+</details>
 
 23. **How do you select a column named 'Age' from a DataFrame `df`?**
     - A. `df['Age']`
@@ -104,11 +121,27 @@ Here's a bulleted list summarizing the syntax for the specified Pandas functions
     - C. Both A and B
     - D. `df(Age)`
 
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** C. Both A and B
+
+**Explanation:** In Pandas, a column can be selected using either df['Age'] or df.Age.
+</details>
+
 24. **What is the output of `df.head(3)` where `df` is a Pandas DataFrame?**
     - A. The first 3 columns of `df`
     - B. The first 3 rows of `df`
     - C. The last 3 rows of `df`
     - D. The header row of `df`
+
+<details>
+<summary>Click to see the answer</summary>
+
+**Answer:** B. The first 3 rows of df
+
+**Explanation:** The head() method in Pandas returns the first N rows of the DataFrame, with df.head(3) returning the first 3 rows.
+</details>
 
 25. **In Pandas, how do you filter rows in DataFrame `df` where the column 'Sales' is greater than 100?**
     - A. `df[df['Sales'] > 100]`
@@ -116,21 +149,11 @@ Here's a bulleted list summarizing the syntax for the specified Pandas functions
     - C. `df.get('Sales' > 100)`
     - D. `df.query('Sales > 100')`
 
----
+<details>
+<summary>Click to see the answer</summary>
 
-### Correct Answers and Explanations
+**Answer:** A. df[df['Sales'] > 100]
 
-21. **Answer: A. DataFrame**
-    - **Explanation**: A DataFrame is a tabular data structure in Pandas, similar to a dictionary of Series.
+**Explanation:** This syntax is used for Boolean indexing in Pandas, filtering rows where the ‘Sales’ column values are greater than 100.
+</details>
 
-22. **Answer: A. `pd.read_csv()`**
-    - **Explanation**: The `pd.read_csv()` function is used in Pandas to read data from a CSV file into a DataFrame.
-
-23. **Answer: C. Both A and B**
-    - **Explanation**: In Pandas, a column can be selected using either `df['Age']` or `df.Age`.
-
-24. **Answer: B. The first 3 rows of `df`**
-    - **Explanation**: The `head()` method in Pandas returns the first N rows of the DataFrame, with `df.head(3)` returning the first 3 rows.
-
-25. **Answer: A. `df[df['Sales'] > 100]`**
-    - **Explanation**: This syntax is used for Boolean indexing in Pandas, filtering rows where the 'Sales' column values are greater than 100.

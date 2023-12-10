@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/LearnPython/PracticeExam.qmd",
     "project_path": "PracticeExam.qmd",
     "type": "quarto_markdown",
-    "hash": "1677173282",
+    "hash": "3168026504",
     "contents": "",
     "dirty": false,
     "created": 1702243826643.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "4,30",
-        "scrollLine": "0"
+        "cursorPosition": "329,0",
+        "scrollLine": "323"
     },
     "folds": "",
-    "lastKnownWriteTime": 1702243847,
+    "lastKnownWriteTime": 1702245994,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1702243847254,
+    "last_content_update": 1702245994117,
     "read_only": false,
     "read_only_alternatives": []
 }

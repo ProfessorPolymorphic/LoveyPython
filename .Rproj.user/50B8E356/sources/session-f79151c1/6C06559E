@@ -3,7 +3,7 @@
     "path": "~/Documents/GitHub/LearnPython/PANDAS.qmd",
     "project_path": "PANDAS.qmd",
     "type": "quarto_markdown",
-    "hash": "1958550359",
+    "hash": "994775860",
     "contents": "",
     "dirty": false,
     "created": 1702238030026.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "11,33",
-        "scrollLine": "0"
+        "cursorPosition": "159,0",
+        "scrollLine": "143"
     },
     "folds": "",
-    "lastKnownWriteTime": 1702243780,
+    "lastKnownWriteTime": 1702244707,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1702243780242,
+    "last_content_update": 1702244707537,
     "read_only": false,
     "read_only_alternatives": []
 }

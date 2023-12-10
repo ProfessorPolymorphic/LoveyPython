@@ -41,11 +41,11 @@ Lovey is intrigued by Python!
 - **List Operations**: `append()`, `index()`, `insert()`, `pop()`, `remove()`, `reverse()`, `count()`.
 - **Indexing and Slicing**: Accessing elements using indices and slicing for sublists.
 
-### Unit 09: Dictionaries
+### [Unit 09: Dictionaries](Dictionaries.qmd)
 - **Key-Value Pairs**: Understanding the structure of dictionaries.
 - **Dictionary Functions**: `keys()`, `values()`, `get()` for accessing dictionary elements.
 
-### Unit 10: HTTP
+### [Unit 10: HTTP](HTTP.qmd)
 - **Making HTTP Requests**: Using `requests.get()` to make GET requests.
 - **Handling JSON**: Using `json()` for parsing JSON responses.
 - **Query Parameters**: Understanding and using query strings/params in requests.

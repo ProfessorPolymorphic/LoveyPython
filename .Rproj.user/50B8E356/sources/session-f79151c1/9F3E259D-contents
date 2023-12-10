@@ -1,0 +1,194 @@
+---
+title: "09 - DICTIONARIES"
+---
+
+# Study Guide for Python Programming: Unit on Dictionaries
+
+:::: {layout="[ 40, 60 ]"}
+
+::: {#first-column}
+![](BertBoris.jpg)
+
+Here is a Dictionary of dog emotions:
+
+{"Boris": "mild confusion", "Bert": "cape fueled rage"}
+
+:::
+
+::: {#second-column}
+
+### List Syntax
+
+Boris made a summary of the syntax for each of the Python dictionary functions in the study guide:
+
+
+- `keys()`
+  - Returns a view object displaying a list of all the keys in the dictionary.
+  - Syntax: `dictionary.keys()`
+
+- `values()`
+  - Returns a view object containing a list of all the values in the dictionary.
+  - Syntax: `dictionary.values()`
+
+- `get()`
+  - Returns the value for the specified key if the key is in the dictionary.
+  - Syntax: `dictionary.get(key, default)`
+  - The `default` parameter is optional and provides a value to return if the key is not found. If not provided, it defaults to `None`.
+
+:::
+
+::::
+
+## Key Concepts
+
+### Basic Concepts of Dictionaries
+- **Key-Value Pairs**: Dictionaries store data as key-value pairs.
+- **Mutability**: Python dictionaries are mutable, meaning their values can be changed after creation.
+- **Accessing Values**: Values in a dictionary are accessed via keys, not indices (e.g., `dict[key]`).
+
+### Basic Dictionary Operations
+- **Creating a Dictionary**: Dictionaries are created with curly braces `{}` or the `dict()` constructor.
+- **Updating Values**: Change the value of an item by referencing its key (e.g., `dict[key] = new_value`).
+- **Handling `KeyError`**: Occurs when a key is not found in the dictionary.
+
+### Dictionary Methods
+- **Useful Methods**: `get()`, `keys()`, `values()`, `del` for deleting a key.
+- **Handling `KeyError` with `get()`**: Avoids an error by returning `None` if the key is not found.
+
+### Lists vs. Dictionaries
+- **When to Use**: Lists are for collections of similar items; dictionaries are for storing records with different types of information.
+
+### Lists of Dictionaries
+- **Representing Complex Data Structures**: Useful for storing multiple records (e.g., a list of student records).
+- **Accessing Data**: Chaining indices and keys (e.g., `students[0]['Name']`).
+
+### JSON and Dictionaries
+- **JSON**: A standard format for data interchange, closely resembling Python dictionaries.
+- **Serializing and Deserializing**: Converting between JSON strings and Python dictionaries.
+- **Python's `json` Module**: Used for loading and saving dictionaries to and from JSON.
+
+## Practice Questions
+
+6. **What is the value returned by `font.get('Size')` if `font` is a dictionary defined as `font = {'Name': 'Arial'}`?**
+   - A. `None`
+   - B. `KeyError`
+   - C. `0`
+   - D. `'Arial'`
+
+7. **What does the following code do? `x['new_key'] = 'new_value'` assuming `x` is a dictionary?**
+   - A. Throws an error because 'new_key' does not exist.
+   - B. Adds a new key-value pair to the dictionary.
+   - C. Changes the value of an existing key.
+   - D. Does nothing to the dictionary.
+
+8. **If `student = {'Name': 'John', 'Age': 21}`, what will `student['Age'] = 22` do?**
+   - A. Adds a new key 'Age' with the value 22.
+   - B. Changes the value of the 'Age' key to 22.
+   - C. Throws a KeyError.
+   - D. Creates a new dictionary with 'Age' set to 22.
+
+9. **In the context of dictionaries, what does the `del` keyword do?**
+   - A. Deletes the entire dictionary.
+   - B. Deletes a specified key-value pair.
+   - C. Deletes the value of a specified key.
+   - D. Clears all values leaving an empty dictionary.
+
+10. **What is the result of `len(s)` where `s = [{'a': 1}, {'b': 2}, {'c': 3}]`?**
+    - A. `3`
+    - B. `6`
+    - C. `2`
+    - D. `9`
+
+
+11. **What is the output of the following code?**
+
+    ```python
+    x = {'a': 5, 'b': {'c': 2, 'd': 4}}
+    print(x['b']['d'])
+    ```
+    A. `5`
+    B. `{'c': 2, 'd': 4}`
+    C. `2`
+    D. `4`
+
+12. **What is the output of the following code?**
+
+    ```python
+    x = {'a': [1, 2], 'b': [3, 4]}
+    x['a'].append(3)
+    print(x['a'])
+    ```
+    A. `[1, 2]`
+    B. `[1, 2, 3]`
+    C. `[3, 4, 3]`
+    D. `KeyError`
+
+13. **What is the output of the following code?**
+
+    ```python
+    x = {'a': 'hello', 'b': 'world'}
+    print('a' in x)
+    ```
+    A. `True`
+    B. `False`
+    C. `'hello'`
+    D. `KeyError`
+
+14. **What happens when the following code is executed?**
+
+    ```python
+    x = {'a': 1, 'b': 2}
+    del x['a']
+    print(x)
+    ```
+    A. `{'a': 1}`
+    B. `{'b': 2}`
+    C. `{1, 2}`
+    D. `KeyError`
+
+15. **What is the result of the following code?**
+
+    ```python
+    x = {'a': [1, 2, 3], 'b': [4, 5, 6]}
+    print(len(x))
+    ```
+    A. `2`
+    B. `3`
+    C. `6`
+    D. `KeyError`
+
+
+
+
+### Correct Answers and Explanations
+
+6. **Answer: A. `None`**
+   - **Explanation**: The `get()` method returns `None` if the key is not found in the dictionary.
+
+7. **Answer: B. Adds a new key-value pair to the dictionary.**
+   - **Explanation**: If the key does not exist, it adds the key-value pair to the dictionary.
+
+8. **Answer: B. Changes the value of the 'Age' key to 22.**
+   - **Explanation**: Since the 'Age' key exists, it updates its value to 22.
+
+9. **Answer: B. Deletes a specified key-value pair.**
+   - **Explanation**: The `del` keyword removes a specific key-value pair from a dictionary.
+
+10. **Answer: A. `3`**
+    - **Explanation**: The `len()` function returns the number of items (dictionaries in this case) in the list `s`, which is 3.
+
+
+11. **Answer: D. `4`**
+    - **Explanation**: The code retrieves the value of key 'd' within the nested dictionary associated with key 'b'.
+
+12. **Answer: B. `[1, 2, 3]`**
+    - **Explanation**: The `append()` method adds the element `3` to the list associated with key 'a'.
+
+13. **Answer: A. `True`**
+    - **Explanation**: The `in` operator checks if 'a' is a key in the dictionary `x`, which it is.
+
+14. **Answer: B. `{'b': 2}`**
+    - **Explanation**: The `del` statement removes the key 'a' and its value from the dictionary, leaving only `{'b': 2}`.
+
+15. **Answer: A. `2`**
+    - **Explanation**: The `len()` function returns the number of key-value pairs in the dictionary `x`, which is 2.

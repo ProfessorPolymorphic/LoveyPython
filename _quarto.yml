@@ -11,6 +11,7 @@ website:
       - Files.qmd
       - Lists.qmd
       - Dictionaries.qmd
+      - HTTP.qmd
      
 
 format:

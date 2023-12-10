@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LOVEY Python Prep - 10 - HTTP</title>
+<title>LOVEY Python Prep - 11 - API</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -132,7 +98,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">09 - DICTIONARIES</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./HTTP.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./HTTP.html" rel="" target="">
  <span class="menu-text">10 - HTTP</span></a>
   </li>  
 </ul>
@@ -151,16 +117,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#study-guide-for-python-programming-unit-on-http" id="toc-study-guide-for-python-programming-unit-on-http" class="nav-link active" data-scroll-target="#study-guide-for-python-programming-unit-on-http">Study Guide for Python Programming: Unit on HTTP</a></li>
-  <li><a href="#study-guide-for-python-programming-unit-on-http-1" id="toc-study-guide-for-python-programming-unit-on-http-1" class="nav-link" data-scroll-target="#study-guide-for-python-programming-unit-on-http-1">Study Guide for Python Programming: Unit on HTTP</a>
+  <li><a href="#study-guide-for-python-programming-unit-on-apis" id="toc-study-guide-for-python-programming-unit-on-apis" class="nav-link active" data-scroll-target="#study-guide-for-python-programming-unit-on-apis">Study Guide for Python Programming: Unit on APIs</a></li>
+  <li><a href="#study-guide-for-python-programming-unit-on-apis-1" id="toc-study-guide-for-python-programming-unit-on-apis-1" class="nav-link" data-scroll-target="#study-guide-for-python-programming-unit-on-apis-1">Study Guide for Python Programming: Unit on APIs</a>
   <ul class="collapse">
   <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts">Key Concepts</a>
   <ul class="collapse">
-  <li><a href="#http-the-protocol-of-the-web" id="toc-http-the-protocol-of-the-web" class="nav-link" data-scroll-target="#http-the-protocol-of-the-web">HTTP: The Protocol of the Web</a></li>
-  <li><a href="#http-request-verbs" id="toc-http-request-verbs" class="nav-link" data-scroll-target="#http-request-verbs">HTTP Request Verbs</a></li>
-  <li><a href="#http-response-status-codes" id="toc-http-response-status-codes" class="nav-link" data-scroll-target="#http-response-status-codes">HTTP Response Status Codes</a></li>
-  <li><a href="#sending-data-over-http" id="toc-sending-data-over-http" class="nav-link" data-scroll-target="#sending-data-over-http">Sending Data over HTTP</a></li>
-  <li><a href="#python-requests-module" id="toc-python-requests-module" class="nav-link" data-scroll-target="#python-requests-module">Python Requests Module</a></li>
+  <li><a href="#introduction-to-web-apis" id="toc-introduction-to-web-apis" class="nav-link" data-scroll-target="#introduction-to-web-apis">Introduction to Web APIs</a></li>
+  <li><a href="#basic-principles-of-web-apis" id="toc-basic-principles-of-web-apis" class="nav-link" data-scroll-target="#basic-principles-of-web-apis">Basic Principles of Web APIs</a></li>
+  <li><a href="#finding-and-using-apis" id="toc-finding-and-using-apis" class="nav-link" data-scroll-target="#finding-and-using-apis">Finding and Using APIs</a></li>
+  <li><a href="#api-authentication" id="toc-api-authentication" class="nav-link" data-scroll-target="#api-authentication">API Authentication</a></li>
+  <li><a href="#python-and-apis" id="toc-python-and-apis" class="nav-link" data-scroll-target="#python-and-apis">Python and APIs</a></li>
   <li><a href="#practical-applications" id="toc-practical-applications" class="nav-link" data-scroll-target="#practical-applications">Practical Applications</a></li>
   </ul></li>
   <li><a href="#practice-questions" id="toc-practice-questions" class="nav-link" data-scroll-target="#practice-questions">Practice Questions</a>
@@ -176,7 +142,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">10 - HTTP</h1>
+<h1 class="title">11 - API</h1>
 </div>
 
 
@@ -191,155 +157,144 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="study-guide-for-python-programming-unit-on-http" class="level1">
-<h1>Study Guide for Python Programming: Unit on HTTP</h1>
+<section id="study-guide-for-python-programming-unit-on-apis" class="level1">
+<h1>Study Guide for Python Programming: Unit on APIs</h1>
 <div class="quarto-layout-panel">
 <div class="quarto-layout-row quarto-layout-valign-top">
 <div id="first-column" class="quarto-layout-cell" style="flex-basis: 40.0%;justify-content: center;">
-<p>Pickle1.jpg)</p>
-<p>Pickle cares not for HTTP!</p>
+<p>Poof.JPG)</p>
+<p>POOF WAFFLE!</p>
 </div>
 <div id="second-column" class="quarto-layout-cell" style="flex-basis: 60.0%;justify-content: center;">
-<section id="http-get-syntax" class="level3">
-<h3 class="anchored" data-anchor-id="http-get-syntax">HTTP GET Syntax</h3>
-<p>Pickle made a summary of the <code>requests.get()</code> function in Python:</p>
+<section id="api-syntax" class="level3">
+<h3 class="anchored" data-anchor-id="api-syntax">API Syntax</h3>
+<p>Here’s Poof Waffle’s bulleted summary of the specified API functions and attributes commonly used with the Python <code>requests</code> library:</p>
 <ul>
-<li><p><strong>Purpose</strong>:</p>
+<li><strong>json()</strong>
 <ul>
-<li>Used to send an HTTP GET request to a specified URL.</li>
+<li>Converts the JSON response content into a Python dictionary.</li>
+<li>Syntax: <code>response.json()</code></li>
+<li>Used when the server response is in JSON format.</li>
 </ul></li>
-<li><p><strong>Basic Syntax</strong>:</p>
+<li><strong>raise_for_status()</strong>
 <ul>
-<li><code>response = requests.get(url, params=None, **kwargs)</code></li>
+<li>Raises an HTTPError exception for certain types of HTTP responses, such as 4xx or 5xx errors.</li>
+<li>Syntax: <code>response.raise_for_status()</code></li>
+<li>Useful for error handling and ensuring the HTTP request was successful.</li>
 </ul></li>
-<li><p><strong>Parameters</strong>:</p>
+<li><strong>get()</strong>
 <ul>
-<li><code>url</code>: The URL to which the GET request is sent.</li>
-<li><code>params</code>: (Optional) A dictionary or bytes to be sent in the query string of the URL.</li>
-<li><code>**kwargs</code>: (Optional) Additional arguments that <code>requests</code> can accept, such as <code>headers</code>, <code>cookies</code>, <code>auth</code> (authentication), <code>timeout</code>, and <code>proxies</code>.</li>
+<li>Sends an HTTP GET request to the specified URL.</li>
+<li>Syntax: <code>requests.get(url, params=None, **kwargs)</code></li>
+<li>Retrieves data from the URL and can accept parameters and other keyword arguments like headers, cookies, etc.</li>
 </ul></li>
-<li><p><strong>Return Value</strong>:</p>
+<li><strong>headers</strong>
 <ul>
-<li>Returns a <code>Response</code> object that contains the server’s response to the HTTP request.</li>
+<li>Contains the HTTP headers that the server sent with the response.</li>
+<li>Accessed as: <code>response.headers</code></li>
+<li>A dictionary-like object allowing access to header values, such as <code>Content-Type</code> or <code>Date</code>.</li>
 </ul></li>
-<li><p><strong>Key Attributes of Response Object</strong>:</p>
+<li><strong>query string/params</strong>
 <ul>
-<li><code>status_code</code>: The HTTP status code of the response.</li>
-<li><code>text</code>: The content of the response in Unicode.</li>
-<li><code>content</code>: The content of the response in bytes.</li>
-<li><code>headers</code>: A dictionary-like object containing the response headers.</li>
-<li><code>url</code>: The URL of the response.</li>
-<li><code>json()</code>: A method to decode the JSON response content into a dictionary.</li>
+<li>Used to pass query parameters in an HTTP GET request.</li>
+<li>Syntax within <code>get()</code>: <code>requests.get(url, params={key: value})</code></li>
+<li><code>params</code> can be a dictionary, a list of tuples, or bytes, sent as a query string in the URL.</li>
 </ul></li>
-<li><p><strong>Common Usage</strong>:</p>
+<li><strong>response.url</strong>
 <ul>
-<li>To retrieve data from a specified resource.</li>
-<li>To interact with web APIs that return data in various formats, commonly JSON.</li>
-<li>To send additional information through query parameters.</li>
+<li>Contains the URL of the response.</li>
+<li>Accessed as: <code>response.url</code></li>
+<li>Useful for debugging or logging, showing the URL after any redirections.</li>
 </ul></li>
-<li><p><strong>Error Handling</strong>:</p>
-<ul>
-<li>It’s important to check the <code>status_code</code> or use <code>response.raise_for_status()</code> to handle potential HTTP errors gracefully.</li>
-</ul></li>
-<li><p><strong>Example</strong>:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(<span class="st">"https://api.example.com/data"</span>, params<span class="op">=</span>{<span class="st">"key1"</span>: <span class="st">"value1"</span>, <span class="st">"key2"</span>: <span class="st">"value2"</span>})</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> response.status_code <span class="op">==</span> <span class="dv">200</span>:</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    data <span class="op">=</span> response.json()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 </ul>
 </section>
 </div>
 </div>
 </div>
 </section>
-<section id="study-guide-for-python-programming-unit-on-http-1" class="level1">
-<h1>Study Guide for Python Programming: Unit on HTTP</h1>
+<section id="study-guide-for-python-programming-unit-on-apis-1" class="level1">
+<h1>Study Guide for Python Programming: Unit on APIs</h1>
 <section id="key-concepts" class="level2">
 <h2 class="anchored" data-anchor-id="key-concepts">Key Concepts</h2>
-<section id="http-the-protocol-of-the-web" class="level3">
-<h3 class="anchored" data-anchor-id="http-the-protocol-of-the-web">HTTP: The Protocol of the Web</h3>
+<section id="introduction-to-web-apis" class="level3">
+<h3 class="anchored" data-anchor-id="introduction-to-web-apis">Introduction to Web APIs</h3>
 <ul>
-<li><strong>URL Requests</strong>: Making a request by typing a URL in a browser.</li>
-<li><strong>Stateless Protocol</strong>: Each HTTP request is independent of others.</li>
-<li><strong>Response</strong>: Contains a status code and content (often HTML).</li>
+<li><strong>Web API</strong>: An Application Program Interface (API) that works over HTTP, allowing remote function calls and service access.</li>
+<li><strong>Evolution from User-Consumption to Device-Consumption</strong>: Transition from browsing the internet to using web services in applications and devices.</li>
 </ul>
 </section>
-<section id="http-request-verbs" class="level3">
-<h3 class="anchored" data-anchor-id="http-request-verbs">HTTP Request Verbs</h3>
+<section id="basic-principles-of-web-apis" class="level3">
+<h3 class="anchored" data-anchor-id="basic-principles-of-web-apis">Basic Principles of Web APIs</h3>
 <ul>
-<li><strong>GET</strong>: Retrieves resources.</li>
-<li><strong>POST</strong>: Sends large data payloads as input.</li>
-<li><strong>PUT</strong>: Used for updates.</li>
-<li><strong>DELETE</strong>: Used to delete resources.</li>
+<li><strong>API</strong>: A set of functions and procedures that allow the creation of applications accessing features or data of an operating system, application, or other services.</li>
+<li><strong>HTTP Protocol</strong>: The foundation for data communication on the Web, used by Web APIs.</li>
+<li><strong>JSON Responses</strong>: Most Web APIs return data in JSON (JavaScript Object Notation) format.</li>
 </ul>
 </section>
-<section id="http-response-status-codes" class="level3">
-<h3 class="anchored" data-anchor-id="http-response-status-codes">HTTP Response Status Codes</h3>
+<section id="finding-and-using-apis" class="level3">
+<h3 class="anchored" data-anchor-id="finding-and-using-apis">Finding and Using APIs</h3>
 <ul>
-<li><strong>1xx</strong>: Informational.</li>
-<li><strong>2xx</strong>: Success (e.g., 200 OK).</li>
-<li><strong>3xx</strong>: Redirection.</li>
-<li><strong>4xx</strong>: Client Error (e.g., 404 Not Found).</li>
-<li><strong>5xx</strong>: Server Error.</li>
+<li><strong>Research</strong>: Use search engines, API registries, and documentation to find relevant APIs.</li>
+<li><strong>API Registries</strong>: Websites like ProgrammableWeb, Mashape Marketplace, and GitHub public APIs list.</li>
+<li><strong>Cloud Providers</strong>: Amazon AWS, Google Cloud, Microsoft Azure, IBM Cloud offer a variety of APIs.</li>
+<li><strong>Mobile Apps</strong>: Many have associated APIs, often listed on their developer pages.</li>
 </ul>
 </section>
-<section id="sending-data-over-http" class="level3">
-<h3 class="anchored" data-anchor-id="sending-data-over-http">Sending Data over HTTP</h3>
+<section id="api-authentication" class="level3">
+<h3 class="anchored" data-anchor-id="api-authentication">API Authentication</h3>
 <ul>
-<li><strong>In the URL</strong>: E.g., <code>GET http://www.someapi.com/user/45</code>.</li>
-<li><strong>On the Query String</strong>: Key-value pairs on the URL, e.g., <code>GET http://www.someapi.com?user=45</code>.</li>
-<li><strong>In the Request Header</strong>: Key-value pairs in the HTTP header.</li>
-<li><strong>In the Body of an HTTP Post</strong>: Data in any format in the body of a POST request.</li>
+<li><strong>Common Methods</strong>: OAuth2, API keys (in headers or query strings).</li>
+<li><strong>Registration</strong>: Many APIs require registration to obtain an API key or token.</li>
+<li><strong>Access Control</strong>: Not all APIs are public or free; some require paid access.</li>
 </ul>
 </section>
-<section id="python-requests-module" class="level3">
-<h3 class="anchored" data-anchor-id="python-requests-module">Python Requests Module</h3>
+<section id="python-and-apis" class="level3">
+<h3 class="anchored" data-anchor-id="python-and-apis">Python and APIs</h3>
 <ul>
-<li><strong>Usage</strong>: To make HTTP requests in Python.</li>
-<li><strong>Handling Responses</strong>: Interpreting the response data, including status codes and content.</li>
-<li><strong>De-serializing JSON Output</strong>: Converting JSON data from the response into Python data structures.</li>
+<li><strong>Requests Module</strong>: A Python library for making HTTP requests to APIs.</li>
+<li><strong>Handling API Responses</strong>: Parsing JSON responses, handling errors, and working with data.</li>
 </ul>
 </section>
 <section id="practical-applications" class="level3">
 <h3 class="anchored" data-anchor-id="practical-applications">Practical Applications</h3>
 <ul>
-<li><strong>Geocoding</strong>: Converting addresses to GPS coordinates.</li>
-<li><strong>Weather Data API</strong>: Retrieving weather forecasts and related information.</li>
+<li><strong>Service Integration</strong>: Combining multiple APIs to create new applications or services.</li>
+<li><strong>Data Retrieval and Analysis</strong>: Fetching data from APIs for analysis or display.</li>
 </ul>
 </section>
 </section>
 <section id="practice-questions" class="level2">
 <h2 class="anchored" data-anchor-id="practice-questions">Practice Questions</h2>
-<ol start="11" type="1">
-<li><p><strong>What HTTP status code represents a successful response?</strong> A. 404 B. 500 C. 200 D. 302</p></li>
-<li><p><strong>What does <code>requests.get()</code> do in Python?</strong> A. Sends a POST request to a URL. B. Requests a resource using the GET method. C. Deletes a resource at a specified URL. D. Updates a resource.</p></li>
-<li><p><strong>In HTTP, which method is commonly used for updating a resource?</strong> A. GET B. POST C. PUT D. DELETE</p></li>
-<li><p><strong>What Python module is commonly used for sending HTTP requests?</strong> A. urllib B. requests C. http D. api</p></li>
-<li><p><strong>When using the requests module, what object contains the response from an HTTP request?</strong> A. The URL object B. The response object C. The header object D. The data object</p></li>
+<ol start="16" type="1">
+<li><p><strong>What is the standard authentication method used by most modern Web APIs?</strong> A. Basic Auth B. OAuth2 C. API Keys D. SSH Keys</p></li>
+<li><p><strong>In Python, which module is primarily used for making HTTP requests to APIs?</strong> A. urllib B. http C. requests D. api</p></li>
+<li><p><strong>Which HTTP method is commonly used for retrieving data from a Web API?</strong> A. POST B. GET C. PUT D. DELETE</p></li>
+<li><p><strong>What format is most commonly used for Web API responses?</strong> A. XML B. HTML C. JSON D. CSV</p></li>
+<li><p><strong>Where is the best place to find documentation for a specific Web API?</strong> A. The API’s official website B. Generic programming forums C. Python’s official documentation D. Textbooks on Python programming</p></li>
 </ol>
 <hr>
 <section id="correct-answers-and-explanations" class="level3">
 <h3 class="anchored" data-anchor-id="correct-answers-and-explanations">Correct Answers and Explanations</h3>
-<ol start="11" type="1">
-<li><strong>Answer: C. 200</strong>
+<ol start="16" type="1">
+<li><strong>Answer: B. OAuth2</strong>
 <ul>
-<li><strong>Explanation</strong>: HTTP status code 200 is the standard response for a successful HTTP request.</li>
+<li><strong>Explanation</strong>: OAuth2 is a common authentication standard used by many modern Web APIs for secure authorization.</li>
 </ul></li>
-<li><strong>Answer: B. Requests a resource using the GET method.</strong>
+<li><strong>Answer: C. requests</strong>
 <ul>
-<li><strong>Explanation</strong>: The <code>requests.get()</code> function in Python is used to make an HTTP GET request to a specified URL.</li>
+<li><strong>Explanation</strong>: The <code>requests</code> module in Python is widely used for making HTTP requests to web APIs.</li>
 </ul></li>
-<li><strong>Answer: C. PUT</strong>
+<li><strong>Answer: B. GET</strong>
 <ul>
-<li><strong>Explanation</strong>: The HTTP PUT method is typically used for updating an existing resource on the server.</li>
+<li><strong>Explanation</strong>: The HTTP GET method is typically used for retrieving data from a Web API.</li>
 </ul></li>
-<li><strong>Answer: B. requests</strong>
+<li><strong>Answer: C. JSON</strong>
 <ul>
-<li><strong>Explanation</strong>: The <code>requests</code> module in Python is widely used for making HTTP requests.</li>
+<li><strong>Explanation</strong>: JSON is the most common format for Web API responses due to its lightweight and ease of use in web applications.</li>
 </ul></li>
-<li><strong>Answer: B. The response object</strong>
+<li><strong>Answer: A. The API’s official website</strong>
 <ul>
-<li><strong>Explanation</strong>: In the <code>requests</code> module, the response from an HTTP request is stored in a response object, which contains the status code, headers, and body of the response.</li>
+<li><strong>Explanation</strong>: The most reliable and up-to-date documentation for a Web API can usually be found on its official website.</li>
 </ul></li>
 </ol>
 
